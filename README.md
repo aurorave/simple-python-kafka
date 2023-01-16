@@ -6,11 +6,12 @@
 - C:\kafka\kafka_2.13-2.7.0\bin\windows
 
 # create topic
-- .\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic hello
-~~- bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --topic csvdata~~
+- .\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic hello <br>
+- ~~bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --topic csvdata~~
 
-# ~~list topic~~
-~~- bin\windows\kafka-topics.bat --list --zookeeper localhost:2181~~
+# list topic
+- .\kafka-topics.bat --list --bootstrap-server localhost:9092
+- ~~bin\windows\kafka-topics.bat --list --zookeeper localhost:2181~~
 
 # producer
 - .\kafka-console-producer.bat --broker-list localhost:9092 --topic hello
